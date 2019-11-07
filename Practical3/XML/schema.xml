@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CustomerListSchema" targetNamespace="http://tempuri.org/CustomerListSchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/CustomerListSchema.xsd" xmlns:mstns="http://tempuri.org/CustomerListSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="postalCode">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:pattern value="\d{6}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="usAddress">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="Street" type="xs:string" />
+      <xs:element name="City" type="xs:string" />
+      <xs:element name="State" type="xs:string" />
+      <xs:element name="Zip" type="postalCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Email">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@]+@[^\.]+\..+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="customerList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Customer" maxOccurs="unbounded" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyName" type="xs:string" />
+              <xs:element name="ContactName" type="xs:string" />
+              <xs:element name="Email" type="Email" />
+              <xs:element name="Phone" type="xs:string" />
+              <xs:element name="ShipToAddress" type="usAddress" />
+              <xs:element name="BillToAddress" type="usAddress" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

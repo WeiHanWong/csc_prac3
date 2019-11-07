@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<customerList xmlns="http://tempuri.org/CustomerListSchema.xsd">
+ <Customer>
+    <CompanyName>Ken Pte Ltd</CompanyName>
+    <ContactName>Paul</ContactName>
+    <Email>paul@hotmail.com</Email>
+    <Phone>99588002</Phone>
+      <ShipToAddress>
+        <Name>Mary</Name>
+<Street>Woodland</Street>
+        <City>Singapore</City>
+        <State>Singapore</State>
+        <Zip>168000</Zip>
+    </ShipToAddress>
+<BillToAddress>
+        <Name>Ken Lim</Name>
+        <Street>Bedok</Street>
+        <City>Singapore</City>
+        <State>Singapore</State>
+        <Zip>681006</Zip>
+    </BillToAddress>
+    </Customer>
+  <Customer>
+    <CompanyName>Ken Pte Ltd</CompanyName>
+    <ContactName>Ji</ContactName>
+    <Email>paul@hotmail.com</Email>
+    <Phone>99588002</Phone>
+    <ShipToAddress>
+      <Name>Mary</Name>
+      <Street>Woodland</Street>
+      <City>Singapore</City>
+      <State>Singapore</State>
+      <Zip>168000</Zip>
+    </ShipToAddress>
+    <BillToAddress>
+      <Name>Ken Lim</Name>
+      <Street>Bedok</Street>
+      <City>Singapore</City>
+      <State>Singapore</State>
+      <Zip>681006</Zip>
+    </BillToAddress>
+  </Customer>
+</customerList>
